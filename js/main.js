@@ -19,11 +19,6 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
-function searchCoffees(str){
-    let input = searchBar.value.toLowerCase();
-    console.log(input);
-}
-
 //Changed render coffee from tables to divs
 function renderCoffee(coffee) {
     var html = '<div class="coffee">';
@@ -53,13 +48,31 @@ function updateCoffees(e) {
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
+//added a search feature that works based on upkey
+function searchCoffees() {
+    var searchedValue = searchSelection.value;
+    var filteredCoffees = [];
+    coffees.forEach(function(coffee) {
+        if (coffee.name.toLowerCase().includes(searchedValue.toLowerCase())) {
+            filteredCoffees.push(coffee);
+            console.log(searchedValue)
+        }
+    });
+    tbody.innerHTML = renderCoffees(filteredCoffees);
+}
+
+
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
+var searchSelection = document.querySelector('#searchBar')
 
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+searchSelection.addEventListener('keyup', searchCoffees);
+
+
 
 
 })(); //IIFE end
