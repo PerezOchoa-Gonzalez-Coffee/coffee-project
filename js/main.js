@@ -66,6 +66,13 @@ function searchCoffees() {
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
+function addACoffee(){
+    var newCoffee = {};
+    newCoffee.name = "";
+    newCoffee.roast = ""
+    coffees.push(newCoffee)
+
+}
 
 var tbody = document.querySelector('#coffees');
 // var submitButton = document.querySelector('#submit');
