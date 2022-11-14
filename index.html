@@ -13,20 +13,36 @@
     <form>
         <label for="roast-selection"></label>
         <select id="roast-selection">
+            <option>select all</option>
             <option>light</option>
             <option>medium</option>
             <option>dark</option>
         </select>
-        <input id="submit" type="submit" />
+<!--        <input id="submit" type="submit" />-->
     </form>
     <div class="input m-auto">
         <input type="search" class="form-control" placeholder="Search Coffees" id="searchBar" >
     </div>
 
+    <hr>
+
+    <h2>Add a Coffee</h2>
+    <form>
+        <label for="roast-added"></label>
+        <select id="roast-added">
+            <option>light</option>
+            <option>medium</option>
+            <option>dark</option>
+        </select>
+<!--        <input id="Add" type="submit" />-->
+        <div class="input m-auto">
+            <input type="search" class="form-control" placeholder="Create Coffee" id="name-added" >
+        </div>
+    </form>
+
+    <br><br><br>
 
     <div>
-        <h4>NAME</h4>
-        <p>ROAST</p>
         <div id="coffees"></div>
     </div>
 

@@ -22,7 +22,8 @@ var coffees = [
 //Changed render coffee from tables to divs
 function renderCoffee(coffee) {
     var html = '<div class="coffee">';
-    html += '<p>' + coffee.name + "&nbsp&nbsp&nbsp" + coffee.roast + '</p>';
+    html += '<h4>' + coffee.name + '</h4>';
+    html += '<p>' + coffee.roast + '</p>';
     html += '</div>';
 
     return html;
@@ -41,7 +42,11 @@ function updateCoffees(e) {
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast) {
+        //Added the select all option
+        if(selectedRoast === "select all"){
+            filteredCoffees.push(coffee);
+        }
+        else if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
         }
     });
@@ -63,13 +68,13 @@ function searchCoffees() {
 
 
 var tbody = document.querySelector('#coffees');
-var submitButton = document.querySelector('#submit');
+// var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 var searchSelection = document.querySelector('#searchBar')
 
 tbody.innerHTML = renderCoffees(coffees);
 
-submitButton.addEventListener('click', updateCoffees);
+roastSelection.addEventListener('change', updateCoffees);
 searchSelection.addEventListener('keyup', searchCoffees);
 
 
