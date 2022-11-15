@@ -8,4 +8,14 @@ td, th {
     padding: 5px 10px;
 }
 
+.coffee{
 
+}
+
+.coffee p{
+    color: gray;
+}
+
+.coffee h4{
+    font-weight: bolder;
+}

@@ -12,37 +12,44 @@
     </div>
 
     <hr>
+    <div class="container p-0">
+        <div class="row">
+            <div class="col-8">
+                <div id="coffees" class="row-cols-2 d-flex flex-wrap"></div>
+            </div>
+            <div id="apps" class="col-4">
+                <form>
+                    <label for="roast-selection" class="text-center col-12">Roasts</label>
+                    <select class="form-select mb-3" id="roast-selection">
+                        <option>select all</option>
+                        <option>light</option>
+                        <option>medium</option>
+                        <option>dark</option>
+                    </select>
+                    <input type="search" class="form-control mb-4" placeholder="Search Coffees" id="searchBar" >
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-primary" type="submit">Brew Review</button>
+                    </div>
+                </form>
 
-    <div class="container row m-0">
-        <div class="col-8">
-            <div id="coffees" class="container row mx-auto p-3"></div>
-        </div>
-        <div id="apps" class="container col-4">
-            <form>
-                <label for="roast-selection">Roasts</label>
-                <select id="roast-selection">
-                    <option>select all</option>
-                    <option>light</option>
-                    <option>medium</option>
-                    <option>dark</option>
-                </select>
-                <input type="search" class="form-control" placeholder="Search Coffees" id="searchBar" >
-                <!--        <input id="submit" type="submit" />-->
-            </form>
+                <hr>
 
-            <hr>
-
-            <h2 class="text-center">Add a Coffee</h2>
-            <form>
-                <label for="roast-added"></label>
-                <select id="roast-added">
-                    <option>light</option>
-                    <option>medium</option>
-                    <option>dark</option>
-                </select>
-                    <input type="search" class="form-control" placeholder="Create Coffee" id="name-added" >
-                <input id="Add" type="submit" />
-            </form>
+                <h2 class="text-center">Add a Coffee</h2>
+                <form>
+                    <label for="roast-added"></label>
+                    <select class="form-select mb-3" id="roast-added">
+                        <option>light</option>
+                        <option>medium</option>
+                        <option>dark</option>
+                    </select>
+                    <div id="">
+                        <input type="text" class="form-control mb-3" placeholder="Create Coffee" id="name-added" >
+                    </div>
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-primary" type="submit" id="submit">New Brew</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 </body>

@@ -66,16 +66,21 @@ function searchCoffees() {
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
-function addACoffee(){
+// created addACoffee feature that add new object to the array
+function addACoffee(e){
+    e.preventDefault(); // don't submit the form, we just want to update the data
     var newCoffee = {};
-    newCoffee.name = "";
-    newCoffee.roast = ""
-    coffees.push(newCoffee)
+    newCoffee.name = document.getElementById('name-added').value;
+    newCoffee.roast = document.getElementById('roast-added').value;
+    coffees.push(newCoffee);
+    tbody.innerHTML = renderCoffees(coffees);
 
 }
 
+
+
 var tbody = document.querySelector('#coffees');
-// var submitButton = document.querySelector('#submit');
+var newBrewButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 var searchSelection = document.querySelector('#searchBar')
 
@@ -83,6 +88,7 @@ tbody.innerHTML = renderCoffees(coffees);
 
 roastSelection.addEventListener('change', updateCoffees);
 searchSelection.addEventListener('keyup', searchCoffees);
+newBrewButton.addEventListener('click',addACoffee)
 
 
 
