@@ -73,6 +73,8 @@ function addACoffee(e){
     newCoffee.name = document.getElementById('name-added').value;
     newCoffee.roast = document.getElementById('roast-added').value;
     coffees.push(newCoffee);
+    localStorage.setItem('coffee' , 'newCoffee');
+    console.log(localStorage.getItem('coffee'));
     tbody.innerHTML = renderCoffees(coffees);
 
 }
