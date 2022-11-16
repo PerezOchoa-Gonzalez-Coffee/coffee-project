@@ -9,18 +9,38 @@ td, th {
 }
 
 .coffee{
-    display: inline;
+
 
 }
 
 .coffee p{
     color: gray;
+    font-size: larger;
 }
 
 .coffee h4{
     font-weight: bolder;
+    /*font-style: italic;*/
+}
+.coffee\!{
+    font-family: "Bradley Hand";
+    background-color:#996b42;
+    color: #ebe3d9;
 }
 
+.bgImage{
+    background-color:#ebe3d9;
+}
+
+#coffees{
+    /*background-color: #f7efd4;*/
+    background-image: url("/images/paperBackground01.jpeg");
+    text-align: center;
+    border-radius: 25px;
+
+}
 *{
-    background-color:;
+    font-family: "Luminari";
+    font-size: 20px;
+
 }

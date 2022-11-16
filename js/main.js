@@ -43,7 +43,7 @@ function updateCoffees(e) {
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
         //Added the select all option
-        if(selectedRoast === "select all"){
+        if(selectedRoast === "all"){
             filteredCoffees.push(coffee);
         }
         else if (coffee.roast === selectedRoast) {
@@ -54,7 +54,8 @@ function updateCoffees(e) {
 }
 
 //added a search feature that works based on upkey
-function searchCoffees() {
+function searchCoffees(e) {
+    e.preventDefault(); // don't submit the form, we just want to update the data
     var searchedValue = searchSelection.value;
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
