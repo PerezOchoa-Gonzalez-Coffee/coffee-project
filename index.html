@@ -8,6 +8,7 @@
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 <body class="body">
+<<<<<<< HEAD
     <div class="nav coffeeNavBarBg mb-3">
         <h1 class="m-auto title">Dark-Ages Coffee!</h1>
     </div>
@@ -52,6 +53,51 @@
                     </div>
                 </form>
             </div>
+=======
+<div class="nav coffeeNavBarBg mb-3">
+    <h1 class="m-auto title">Dark-Ages Coffee!</h1>
+</div>
+<div class="container p-0">
+    <div class="row">
+<!--        replaced tables with divs which are generated from the JS      -->
+        <div class="col-8">
+            <h2 class="text-center">Current Brews</h2>
+            <div id="coffees" class="row-cols-2 d-flex flex-wrap p-3"></div>
+        </div>
+        <div id="apps" class="col-4">
+            <form>
+                <h2 class="text-center">Search</h2>
+                <label for="roast-selection" class="text-center col-12">By Roast:</label>
+                <select class="form-select mb-3" id="roast-selection">
+                    <option selected disabled>Select a Roast</option>
+                    <option>all</option>
+                    <option>light</option>
+                    <option>medium</option>
+                    <option>dark</option>
+                </select>
+                <label for="searchBar" class="text-center col-12">By name:</label>
+                <input type="search" class="form-control mb-4" placeholder="Search Coffees" id="searchBar">
+                <div class="d-grid">
+                    <button class="btn btn-light" type="button">Brew Review</button>
+                </div>
+            </form>
+            <hr>
+            <form>
+                <h2 class="text-center">Add a coffee</h2>
+                <label for="name-added" class="text-center col-12">Name:</label>
+                <input type="text" class="form-control mb-3" placeholder="Create Coffee" id="name-added">
+                <label for="roast-added" class="text-center col-12">Roast:</label>
+                <select class="form-select mb-3" id="roast-added">
+                    <option selected disabled>Select a Roast</option>
+                    <option>light</option>
+                    <option>medium</option>
+                    <option>dark</option>
+                </select>
+                <div class="d-grid">
+                    <button class="btn btn-light" type="submit" id="submit">New Brew</button>
+                </div>
+            </form>
+>>>>>>> 849d638d24faa63cd37f29d49d76b36b4b3286f7
         </div>
     </div>
     <div class="container col-12">

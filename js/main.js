@@ -19,7 +19,7 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
-//Changed render coffee from tables to divs
+//Changed render coffee from tables to divs. This function writes out html for us that includes all the objects in the array.
 function renderCoffee(coffee) {
     var html = '<div class="coffee">';
     html += '<h4>' + coffee.name + '</h4>';
@@ -29,7 +29,7 @@ function renderCoffee(coffee) {
     return html;
 }
 
-//Changed the forLoop to go in ascending order instead
+//Changed the forLoop to go in ascending order instead by modifying its variables
 function renderCoffees(coffees) {
     var html = '';
     for(var i = 0; i < coffees.length; i++) {
@@ -55,7 +55,7 @@ function updateCoffees(e) {
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
-//added a search feature that works based on upkey
+//added a search feature that works as long as it INCLUDES any of the characters being typed because the function will execute/re-execute at every upkey event
 function searchCoffees(e) {
     e.preventDefault();
     var searchedValue = searchSelection.value;
@@ -69,7 +69,7 @@ function searchCoffees(e) {
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
-// created addACoffee feature that add new object to the array
+//Repurposed our searchCoffees function to create an addACoffee function that pushes a new object to the end of our array of objects
 function addACoffee(e){
     e.preventDefault();
     var newCoffee = {};
@@ -90,8 +90,11 @@ tbody.innerHTML = renderCoffees(coffees);
 
 
 //changed types as well as created new event listeners.
+//roastSelection listens for a change in the dro down menu
 roastSelection.addEventListener('change', updateCoffees);
+//searchSelection executes the searchCoffees function at every keyup event
 searchSelection.addEventListener('keyup', searchCoffees);
+//newBrewButton will execute addACoffee once the button is clicked
 newBrewButton.addEventListener('click',addACoffee)
 
 
