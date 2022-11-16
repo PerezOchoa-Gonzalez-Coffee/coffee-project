@@ -28,6 +28,7 @@ function renderCoffee(coffee) {
 
     return html;
 }
+
 //Changed the forLoop to go in ascending order instead
 function renderCoffees(coffees) {
     var html = '';
@@ -37,8 +38,9 @@ function renderCoffees(coffees) {
     return html;
 }
 
+//added an all feature for searching
 function updateCoffees(e) {
-    e.preventDefault(); // don't submit the form, we just want to update the data
+    e.preventDefault();
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
@@ -55,7 +57,7 @@ function updateCoffees(e) {
 
 //added a search feature that works based on upkey
 function searchCoffees(e) {
-    e.preventDefault(); // don't submit the form, we just want to update the data
+    e.preventDefault();
     var searchedValue = searchSelection.value;
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
@@ -69,26 +71,25 @@ function searchCoffees(e) {
 
 // created addACoffee feature that add new object to the array
 function addACoffee(e){
-    e.preventDefault(); // don't submit the form, we just want to update the data
+    e.preventDefault();
     var newCoffee = {};
     newCoffee.name = document.getElementById('name-added').value;
     newCoffee.roast = document.getElementById('roast-added').value;
     coffees.push(newCoffee);
-    localStorage.setItem('coffee' , 'newCoffee');
-    console.log(localStorage.getItem('coffee'));
     tbody.innerHTML = renderCoffees(coffees);
-
 }
 
-
-
+//added a newBrewButton as well as a search selection
 var tbody = document.querySelector('#coffees');
 var newBrewButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 var searchSelection = document.querySelector('#searchBar')
 
+
 tbody.innerHTML = renderCoffees(coffees);
 
+
+//changed types as well as created new event listeners.
 roastSelection.addEventListener('change', updateCoffees);
 searchSelection.addEventListener('keyup', searchCoffees);
 newBrewButton.addEventListener('click',addACoffee)

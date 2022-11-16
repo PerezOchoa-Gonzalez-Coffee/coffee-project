@@ -1,46 +1,46 @@
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
-}
+/*table {*/
+/*    border-collapse: collapse;*/
+/*    margin: 15px 0;*/
+/*}*/
 
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
-}
+/*td, th {*/
+/*    border: 1px solid black;*/
+/*    padding: 5px 10px;*/
+/*}*/
+/*----------------------------------------------------new CSS----------------------------------------------------*/
 
-.coffee{
-
-
-}
-
-.coffee p{
-    color: gray;
-    font-size: larger;
-}
-
-.coffee h4{
-    font-weight: bolder;
-    /*font-style: italic;*/
-}
-.coffee\!{
-    font-family: "Bradley Hand";
-    background-color:#996b42;
-    color: #ebe3d9;
-}
-
-.bgImage{
-    background-color:#ebe3d9;
-}
-
-#coffees{
-    /*background-color: #f7efd4;*/
-    background-image: url("/images/paperBackground01.jpeg");
-    text-align: center;
-    border-radius: 25px;
-
-}
 *{
     font-family: "Luminari";
     font-size: 20px;
+}
 
+.body{
+    background-color:#ebe3d9;
+;
+}
+
+.coffeeNavBarBg h1{
+    color: #ebe3d9;
+    font-size: 55px;
+}
+
+.coffee h4{
+    font-weight:bolder;
+    font-size: 35px;
+    margin-bottom: 0px;
+}
+
+.coffee p{
+    font-size: 25px;
+    font-family: "brush script MT";
+}
+
+.coffeeNavBarBg{
+    background-color:#996b42;
+}
+
+#coffees{
+    background-image: url("/images/paperBackground01.jpeg");
+    text-align: center;
+    border-radius: 3px;
 }
