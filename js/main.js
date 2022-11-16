@@ -41,7 +41,7 @@ function renderCoffees(coffees) {
 //added an all feature for searching
 function updateCoffees(e) {
     e.preventDefault();
-    var selectedRoast = roastSelection.value;
+    var selectedRoast = roastSelection.value.toLowerCase();
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
         //Added the select all option
