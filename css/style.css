@@ -1,45 +1,18 @@
-/*table {*/
-/*    border-collapse: collapse;*/
-/*    margin: 15px 0;*/
-/*}*/
-
-/*td, th {*/
-/*    border: 1px solid black;*/
-/*    padding: 5px 10px;*/
-/*}*/
-/*----------------------------------------------------new CSS----------------------------------------------------*/
-
-*{
-    font-family: "Luminari";
-    font-size: 20px;
+body{
+    background-image: url("/images/CoffeeBeanBackground.jpg");
 }
 
-.body{
-    background-color:#ebe3d9;
-;
-}
-
-.coffeeNavBarBg h1{
-    color: #ebe3d9;
-    font-size: 55px;
-}
-
-.coffee h4{
-    font-weight:bolder;
-    font-size: 35px;
-    margin-bottom: 0px;
-}
-
-.coffee p{
-    font-size: 25px;
-}
-
-.coffeeNavBarBg{
-    background-color:#996b42;
-}
-
-#coffees{
+.title{
     background-image: url("/images/paperBackground01.jpeg");
+    height: 20%;
+    font-family: Chalkduster;
+    font-size: 4em;
+    width: 60%;
     text-align: center;
-    border-radius: 3px;
 }
+
+.theStuff{
+    background-image: url("/images/paperBackground01.jpeg");
+}
+
+
