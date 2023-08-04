@@ -1,9 +1,9 @@
 body{
-    background-image: url("./images/CoffeeBeanBackground.jpg");
+    background-image: url("https://github.com/PerezOchoa-Gonzalez-Coffee/coffee-project/tree/b112b7a629f7ddd67a645479f901ba5b1b60d8e8/images/CoffeeBeanBackground.jpg");
 }
 
 .title{
-    background-image: url("./images/paperBackground01.jpeg");
+    background-image: url("https://github.com/PerezOchoa-Gonzalez-Coffee/coffee-project/tree/b112b7a629f7ddd67a645479f901ba5b1b60d8e8/images/paperBackground01.jpeg");
     height: 20%;
     font-family: Chalkduster;
     font-size: 4em;
@@ -12,7 +12,7 @@ body{
 }
 
 .theStuff{
-    background-image: url("./images/paperBackground01.jpeg");
+    background-image: url("https://github.com/PerezOchoa-Gonzalez-Coffee/coffee-project/tree/b112b7a629f7ddd67a645479f901ba5b1b60d8e8/images/paperBackground01.jpeg");
 
     border: black 8px solid;
 }
