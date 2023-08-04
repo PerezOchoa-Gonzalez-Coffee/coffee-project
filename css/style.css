@@ -3,7 +3,7 @@ body{
 }
 
 .title{
-    background-image: url("/images/paperBackground01.jpeg");
+    background-image: url("images/paperBackground01.jpeg");
     height: 20%;
     font-family: Chalkduster;
     font-size: 4em;
@@ -12,7 +12,7 @@ body{
 }
 
 .theStuff{
-    background-image: url("/images/paperBackground01.jpeg");
+    background-image: url("images/paperBackground01.jpeg");
 
     border: black 8px solid;
 }
